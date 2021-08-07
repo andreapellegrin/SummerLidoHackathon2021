@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DXFtoWeather</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1 ,user-scalable=no">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="row">
+      <div class="bigCol">
+        <canvas id="canvas" width="962px" height="693px"></canvas>
+      </div>
+      <div class="littleCol">
+        <section>
+          <h1>DXF<span class="littleTitle">to</span>Weather</h1>
+          <p class="instructions">📥 Upload a .dxf file</p>
+          <input type="file" id="filePicker" accept=".dxf" name="Select file">
+          <div class="coordinateInputs hidden">
+            Lon: <input type="number" id="x" min=0 value="11.32215">
+            <br/>
+            Lat: <input type="number" id="y" min=0 value="46.45336">
+            <br/>
+            <p class="error"></p>
+          </div>
+          <div id="weatherInfo" class="hidden">
+            <p id="distance"><span>Distance from sea</span>: 146.35km</p>
+            <div id="temperature"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
+            <div id="UV"></div>
+            <div id="sun"></div>
+            <div id="rain"></div>
+          </div>
+          <button type="button" id="button" onclick="next()">Start</button>
+        </section></div>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    <script src="dxf-parser.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

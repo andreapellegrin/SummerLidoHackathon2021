@@ -1,0 +1,112 @@
+@font-face {
+  font-family: lemon-milk;
+  src: url(lemon-milk.otf);
+}
+
+@font-face {
+  font-family: AvenirNext;
+  src: url(AvenirNext/regular.otf);
+}
+
+@font-face {
+    font-family: AvenirNext;
+    src: url(AvenirNext/bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: AvenirNext;
+    src: url(AvenirNext/it.otf);
+    font-style: italic;
+}
+
+body, html, .row {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial";
+  box-sizing: border-box;
+  font-family: AvenirNext;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.opacityTransition {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.25;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+}
+
+section {
+  position: relative;
+  background-color: white;
+  width: 80%;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 10px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.bigCol {
+  flex: 70%;
+}
+
+.littleCol {
+  flex: 30%;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, .litleTitle {
+  font-family: lemon-milk;
+}
+
+.littleTitle {
+  font-size: 0.4em;
+}
+
+.error {
+  color: ;
+}
+
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+.chartTitleText {
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(55, 61, 63)
+}
+
+.chartTitleText > span {
+  font-weight: 900;
+}
